@@ -36,11 +36,11 @@ function App() {
               {datos.map( dato => (
                 <div key={dato.id} className="bg-gray-200">
                   <h2>{dato.puesto}</h2>
-                  <p>Edad: {dato.edad}</p>
+                  <p>Edad: {dato.edadMinima} - {dato.edadMaxima}</p>
                   <p>Sexo: {dato.sexo}</p>
                   <p>Escolaridad: {dato.escolaridad}</p>
                   <p>Experiencia: {dato.experiencia}</p>
-                  <p>Horario: {dato.horario}</p>
+                  <p>Horario: {dato.horarioEntrada} - {dato.horarioSalida}</p>
                   <p>Municipio: {dato.municipio}</p>
                   <p>Sueldo Mensual: {dato.sueldoMensual}</p>
                 </div>

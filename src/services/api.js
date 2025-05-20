@@ -2,7 +2,8 @@
 
 export async function getEmpleos() {
 
-    const url = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRiWg81ywV7kiC30qs3uj6NpQpgy8zfQZZ83HCoUWhhgt8nHPxlLRAqROH7QWFmkz1jAeuSwTw4XCKr/pub?gid=0&single=true&output=csv';
+    // const url = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRiWg81ywV7kiC30qs3uj6NpQpgy8zfQZZ83HCoUWhhgt8nHPxlLRAqROH7QWFmkz1jAeuSwTw4XCKr/pub?gid=0&single=true&output=csv';
+    const url = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTb3vZx0ij62oiUK7s_oJKYX6EARIIyD1jSN13iRPovdpNlYX9cPtYDtwfwh8vpzI4w38Amb4w-3EGA/pub?gid=1472922734&single=true&output=csv';
 
     try{
 
@@ -25,11 +26,13 @@ function parseCsv(data) {
         id: element[0],
         escolaridad: element[1],
         puesto: element[2],
-        edad: element[3],
-        experiencia: element[4],
-        sexo: element[5],
-        sueldoMensual: Number(element[6]),
-        horario: element[7],
-        municipio: element[8]
+        edadMinima: element[3],
+        edadMaxima: element[4],
+        experiencia: element[5],
+        sexo: element[6],
+        sueldoMensual: Number(element[7]),
+        horarioEntrada: element[8],
+        horarioSalida: element[9],
+        municipio: element[10],
     }))
 }
