@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { getEmpleos } from "./services/api";
-
+import { formatearCantidad } from "./utils";
 
 function App() {
 
@@ -40,9 +40,9 @@ function App() {
                   <p>Sexo: {dato.sexo}</p>
                   <p>Escolaridad: {dato.escolaridad}</p>
                   <p>Experiencia: {dato.experiencia}</p>
-                  <p>Horario: {dato.horarioEntrada} - {dato.horarioSalida}</p>
+                  <p>Horario: {dato.horarioEntrada.slice(0, -2)} am - {dato.horarioSalida.slice(0, -2)} pm</p>
                   <p>Municipio: {dato.municipio}</p>
-                  <p>Sueldo Mensual: {dato.sueldoMensual}</p>
+                  <p className="text-lg">Sueldo Mensual: {dato.sueldoMensual === 0 ? 'En entrevista' : formatearCantidad(dato.sueldoMensual)}</p>
                 </div>
               ))}
           </div>
